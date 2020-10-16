@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <link href="bootstrap/3.0.0/css/bootstrap.min.css"
+     rel="stylesheet">
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+   </div>
+   <hr/>
+   <div>
+    Your weather is: <strong>{{user_weather}}</strong>
+  <div class="header">
+   </div>
+   <hr/> 
+ </body>
+</html>
