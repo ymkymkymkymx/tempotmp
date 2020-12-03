@@ -12,15 +12,14 @@ def index():
         zipcode=thedict['zipcode']
         countrycode=thedict['country_code2']
         wr=apirequest.get('http://api.openweathermap.org/data/2.5/weather?zip={0},{1}&appid={2}'.format(zipcode,countrycode,weatherkey))
-        weatherdict=wr.json()
-        
+        weatherdict=wr.json()        
         weather=weatherdict['weather'][0]['main']
     except Exception:
         return render_template('weather.html', user_weather='Cannot get your location')
-    return render_template('weather.html', user_weather=weather)
+    return render_template('weather.html', user_weather=weather,user_loc=thedict['zipcode'])
 if __name__ == '__main__':
     app.run(
-     host="0.0.0.0",
+    host="0.0.0.0",
     port=80
  )
     
